@@ -21,6 +21,7 @@ Log/
 Backup/
 *.bak
 
-# Output di prova e analisi temporanee
+# Output e cartelle di prova / analisi temporanee
+Prova/
 Generati/
 Analisi*/

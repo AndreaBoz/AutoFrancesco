@@ -23,8 +23,6 @@ This repository brings together both operational modules sharing the same proces
 │   ├── genera.command                  Double-click launcher (FLOTT HACCP archive)
 │   ├── PDF Vendite/                    Input folder for sales DDT PDFs
 │   ├── PDF Acquisti/                   Input folder for purchase invoice PDFs
-│   ├── Prova/
-│   │   └── prova a vuoto.command       Dry-run execution into Prova/Generati/
 │   └── src/
 │       ├── riepilogo.py                DDT -> DR.RPD.00 / EST-Riepilogo produzione
 │       ├── pesate.py                   DDT -> DR.CPF.70 finished-product weight checks
@@ -37,9 +35,7 @@ This repository brings together both operational modules sharing the same proces
     ├── README.md                       Operational guide (External, Italian)
     ├── genera esterni.command          Double-click launcher (HACCP/ESTERNI archive)
     ├── EST PDF Vendite/                Input folder for external sales DDT PDFs
-    ├── EST PDF Acquisti/               Input folder for external purchase invoice PDFs
-    └── Prova/
-        └── prova a vuoto.command       Dry-run execution into Prova/Generati/
+    └── EST PDF Acquisti/               Input folder for external purchase invoice PDFs
 ```
 
 ---
@@ -82,8 +78,7 @@ The `.command` launchers and `riepilogo.py` expect the local Excel archive at `~
 ## Usage
 
 1. Place new PDF files into the corresponding input folders (`PDF Vendite` / `PDF Acquisti` for FLOTT, or `EST PDF Vendite` / `EST PDF Acquisti` for external partners).
-2. To preview changes without touching the live archive, run **`Prova/prova a vuoto.command`**.
-3. To update the live HACCP archive, double-click:
+2. To update the live HACCP archive, double-click:
    - **`AutoFrancesco/genera.command`** (FLOTT)
    - **`AutoFrancesco Esterni/genera esterni.command`** (External)
 
@@ -93,4 +88,4 @@ For detailed parsing rules, quarter/year rollover instructions, and CLI flags, s
 
 ## Excluded Data
 
-`.gitignore` excludes business PDFs (DDTs and invoices), log files, `*-visti.txt` tracking files, `.bak` backups, dry-run outputs in `Prova/Generati/`, and `.venv/`.
+`.gitignore` excludes business PDFs (DDTs and invoices), log files, `*-visti.txt` tracking files, `.bak` backups, `Prova/` folders (including dry-run outputs in `Generati/`), and `.venv/`.
