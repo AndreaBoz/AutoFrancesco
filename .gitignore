@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Documenti PDF aziendali (fatture, DDT, archivi)
+*.pdf
+*.PDF
+
+# Log, memorie dei documenti visti e backup automatici
+Log/
+*.log
+*-visti.txt
+Backup/
+*.bak
+
+# Output di prova e analisi temporanee
+Generati/
+Analisi*/
